@@ -14,6 +14,7 @@ RUN echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true 
 RUN apt-get -y install oracle-java7-installer && apt-get clean
 
 RUN echo "JAVA_HOME=/usr/lib/jvm/java-7-oracle" >> /etc/environment
+ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
 
 ENTRYPOINT ["java"]
 CMD ["-version"]
