@@ -19,3 +19,11 @@ The following tags are available for this image:
 ## Building
 
 To build this image, simply run `docker build -t quay.io/totem/java-oracle-base:<version> .` from the root of this repository.
+
+## Pushing the Image
+
+To push the image, run
+
+```
+docker push quay.io/totem/java-oracle-base
+```
