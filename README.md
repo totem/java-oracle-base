@@ -14,7 +14,8 @@ quay.io/totem/java-oracle-base
 ## Tags
 
 The following tags are available for this image:
-+ 7
++ 7-trusty
++ 8-trusty
 
 ## Building
 
