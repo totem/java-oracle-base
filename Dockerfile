@@ -14,5 +14,7 @@ RUN apt-get -y install oracle-java8-installer maven && apt-get clean
 RUN echo "JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> /etc/environment
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
+RUN grep '^networkaddress.cache.ttl=' $JAVA_HOME/lib/security/java.security || echo 'networkaddress.cache.ttl=60' >> $JAVA_HOME/lib/security/java.security
+
 ENTRYPOINT ["java"]
 CMD ["-version"]
